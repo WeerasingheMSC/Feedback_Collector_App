@@ -32,11 +32,21 @@ export default function Home() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16 md:mb-20"
         >
-          <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-primary-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6 animate-gradient bg-300%"
-          >
-            Feedback Collector
-          </motion.h1>
+          <motion.div className="flex items-center justify-center gap-4 mb-6">
+            <motion.img
+              src="/logo.png"
+              alt="Feedback Collector Logo"
+              className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain rounded-full"
+              initial={{ scale: 0, rotate: -180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+            />
+            <motion.h1 
+              className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-primary-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient bg-300%"
+            >
+              Feedback Collector
+            </motion.h1>
+          </motion.div>
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

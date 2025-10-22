@@ -1,4 +1,3 @@
-import '@ant-design/v5-patch-for-react-19';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import AntdProvider from '@/components/AntdProvider';
@@ -7,7 +6,12 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Feedback Collector - Share Your Thoughts',
-  description: 'A modern feedback collection platform where users can share their thoughts and experiences'
+  description: 'A modern feedback collection platform where users can share their thoughts and experiences',
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
 };
 
 export default function RootLayout({
