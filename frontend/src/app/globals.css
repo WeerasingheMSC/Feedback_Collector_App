@@ -10,6 +10,53 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Primary Colors */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+
+  /* Animations */
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-gradient: gradient 8s linear infinite;
+
+  /* Background Sizes */
+  --background-size-300: 300%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +70,44 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Modal Styles */
+.feedback-modal .ant-modal-content {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.feedback-modal .ant-modal-close {
+  color: #9ca3af;
+  transition: all 0.3s;
+}
+
+.feedback-modal .ant-modal-close:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.feedback-modal .ant-modal-close-x {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 18px;
+}
+
+/* Utility Classes for Animations */
+.animate-shimmer {
+  animation: var(--animate-shimmer);
+}
+
+.animate-float {
+  animation: var(--animate-float);
+}
+
+.animate-gradient {
+  animation: var(--animate-gradient);
+}
+
+.bg-300\% {
+  background-size: var(--background-size-300);
 }
