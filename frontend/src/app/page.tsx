@@ -84,9 +84,16 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
-        className="relative z-10 text-center py-8 text-gray-500 text-sm border-t border-gray-800 mt-20"
+        className="relative z-10 text-center py-8 px-4 text-gray-500 text-sm border-t border-gray-800 mt-20"
       >
-        <h1 className=''>All Right reserved Sahan Champathi weerasinghe@ 2025</h1>
+        <div className="container mx-auto">
+          <p className="mb-2">
+            © 2025 <span className="text-primary-400 font-semibold">Feedback Collector</span>. All rights reserved.
+          </p>
+          <p className="text-xs text-gray-600">
+            Developed by Sahan Champathi Weerasinghe
+          </p>
+        </div>
       </motion.footer>
     </div>
   );
