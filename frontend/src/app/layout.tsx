@@ -1,3 +1,4 @@
+import '@ant-design/v5-patch-for-react-19';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import AntdProvider from '@/components/AntdProvider';

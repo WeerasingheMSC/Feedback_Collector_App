@@ -13,9 +13,14 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/feedbackdb')
-.then(() => console.log('MongoDB Connected'))
-.catch(err => console.error('MongoDB Connection Error:', err));
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/feedbackdb', {
+  serverSelectionTimeoutMS: 5000,
+})
+.then(() => console.log('✅ MongoDB Connected Successfully'))
+.catch(err => {
+  console.error('❌ MongoDB Connection Error:', err.message);
+  console.log('💡 Tip: Check your internet connection and MongoDB Atlas credentials');
+});
 
 // Routes
 app.use('/api/feedback', feedbackRoutes);
