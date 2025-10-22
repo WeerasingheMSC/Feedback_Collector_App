@@ -80,7 +80,7 @@ const feedbackSchema = new mongoose.Schema({
 
 ### 1️⃣ Clone the Repository  
 ```
-git clone "https://github.com/WeerasingheMSC/feedback-app.git](https://github.com/WeerasingheMSC/Feedback_Collector_App.git"
+git clone "https://github.com/WeerasingheMSC/feedback-app.git"
 cd feedback-app
 ```
 ### 2️⃣ Backend Setup  
